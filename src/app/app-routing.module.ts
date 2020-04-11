@@ -5,14 +5,14 @@ import { HomeComponent } from './home/home/home.component';
 import { ActivityComponent } from './activity/activity/activity.component';
 import { NewsComponent } from './news/news/news.component';
 import { TabbarComponent } from './tabbar/tabbar.component';
+import { ProfileComponent } from './profile/profile/profile.component';
 
 const routes: Routes = [
   {path: 'promo',     component: PromoComponent},
   {path: 'activity',  component: ActivityComponent},
   {path: 'home',      component: HomeComponent},
   {path: 'news',      component: NewsComponent},
-  {path: 'profile',   component: PromoComponent},
-  {path: 'tab',   component: TabbarComponent},
+  {path: 'profile',   component: ProfileComponent},
 ];
 
 @NgModule({
@@ -21,4 +21,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [PromoComponent, ActivityComponent, HomeComponent, NewsComponent, PromoComponent];
+export const routingComponents = [PromoComponent, ActivityComponent, HomeComponent, NewsComponent, ProfileComponent];

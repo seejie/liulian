@@ -10,9 +10,10 @@
     text-align: center;
 }
 
-.toolbar a {
-    /* background: red; */
-}
+
+/* .toolbar a {
+    background: red;
+} */
 
 .toolbar span {
     cursor: pointer;
