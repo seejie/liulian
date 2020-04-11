@@ -17,7 +17,7 @@ import { TabbarComponent } from './tabbar/tabbar.component';
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
