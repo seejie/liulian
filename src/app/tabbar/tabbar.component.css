@@ -1,0 +1,25 @@
+.toolbar {
+    font-family: Corbel, "Lucida Grande", sans-serif;
+    background: #fffaf6;
+    color: #c3c2c1;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, .3);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    font-weight: 400;
+    text-align: center;
+}
+
+.toolbar a {
+    /* background: red; */
+}
+
+.toolbar span {
+    cursor: pointer;
+}
+
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+}
