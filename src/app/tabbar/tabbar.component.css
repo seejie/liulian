@@ -14,9 +14,14 @@
     text-decoration: none;
 }
 
-.toolbar a .label {
-    font-size: 12px;
-    color: #c3c2c1;
+.toolbar .label {
+    font-size: 15px;
+    color: #a8a8a7;
+}
+
+.toolbar .icon {
+    font-size: 15px;
+    color: #a8a8a7;
 }
 
 

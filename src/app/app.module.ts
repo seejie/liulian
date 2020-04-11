@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { TabbarComponent } from './tabbar/tabbar.component'; 
+import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
 
 @NgModule({
   declarations: [
@@ -16,10 +20,15 @@ import { TabbarComponent } from './tabbar/tabbar.component';
   imports: [
     BrowserModule,
     MaterialModule,
+    FontAwesomeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far);
+  }
+}
