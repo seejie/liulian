@@ -7,7 +7,7 @@ import { NewsComponent } from './news/news/news.component';
 import { TabbarComponent } from './tabbar/tabbar.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { PreproductnameComponent } from './home/prepaid/preproductname/preproductname.component';
+import { PreproductnameComponent } from './home/payment/preproductname/preproductname.component';
 
 const routes: Routes = [
   {path: '',          redirectTo: '/home', pathMatch: 'full'},

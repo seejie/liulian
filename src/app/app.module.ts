@@ -11,8 +11,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
-import { PreproductnameComponent } from './home/prepaid/preproductname/preproductname.component';
-import { PreproductamountComponent } from './home/prepaid/preproductamount/preproductamount.component';
+import { PreproductnameComponent } from './home/payment/preproductname/preproductname.component';
+import { PreproductamountComponent } from './home/payment/preproductamount/preproductamount.component';
 
 
 @NgModule({
