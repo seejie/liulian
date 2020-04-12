@@ -6,13 +6,17 @@ import { ActivityComponent } from './activity/activity/activity.component';
 import { NewsComponent } from './news/news/news.component';
 import { TabbarComponent } from './tabbar/tabbar.component';
 import { ProfileComponent } from './profile/profile/profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
+  {path: '',          redirectTo: '/home', pathMatch: 'full'},
   {path: 'promo',     component: PromoComponent},
   {path: 'activity',  component: ActivityComponent},
   {path: 'home',      component: HomeComponent},
   {path: 'news',      component: NewsComponent},
   {path: 'profile',   component: ProfileComponent},
+
+  {path: '**',        component: NotFoundComponent}
 ];
 
 @NgModule({
@@ -21,4 +25,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [PromoComponent, ActivityComponent, HomeComponent, NewsComponent, ProfileComponent];
+export const routingComponents = [PromoComponent, ActivityComponent, HomeComponent, NewsComponent, ProfileComponent, NotFoundComponent];

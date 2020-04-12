@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar" style="padding: 0;">
+<mat-toolbar class="toolbar" >
     <!-- <span mat-button>Promo</span>
     <span class="example-fill-remaining-space"></span>
     <span mat-button>Activity</span>
@@ -11,6 +11,7 @@
 
     <!-- <span><mat-icon>dns</mat-icon></span> -->
     <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
+    <!-- <div class="icon"><fa-icon [icon]="['far', 'user']"></fa-icon></div> -->
 
 
     <a routerLink="/promo" routerLinkActive="active new-back" class="auto-space">
@@ -21,8 +22,8 @@
         <div class="icon"><mat-icon>notes</mat-icon></div>
         <div class="label"><span>Activity</span></div>
     </a>
-    <a routerLink="/home" routerLinkActive="active new-back" class="auto-space">
-        <div class="icon"><mat-icon>graphic_eq</mat-icon></div>
+    <a routerLink="/home" routerLinkActive="active new-back" class="auto-space circle">
+        <div class="tab-logo"><span class="liu">LIU</span><span class="lian">LIAN</span></div>
         <div class="label"><span>Home</span></div>
     </a>
     <a routerLink="/news" routerLinkActive="active new-back" class="auto-space">
@@ -30,7 +31,8 @@
         <div class="label"><span>News</span></div>
     </a>
     <a routerLink="/profile" routerLinkActive="active new-back" class="auto-space">
-        <div class="icon"><fa-icon [icon]="['far', 'user']"></fa-icon></div>
+        <div class="icon"><mat-icon>sync</mat-icon></div>
         <div class="label"><span>Profile</span></div>
     </a>
 </mat-toolbar>
+ 

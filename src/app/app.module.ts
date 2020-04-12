@@ -9,19 +9,23 @@ import { TabbarComponent } from './tabbar/tabbar.component';
 import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TabbarComponent,
-    routingComponents
+    routingComponents,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     FontAwesomeModule,
     AppRoutingModule,
+    MatCarouselModule.forRoot(),
     BrowserAnimationsModule,
   ],
   providers: [],
