@@ -22,6 +22,20 @@ body {
     background: #fff8f3;
 }
 
+.liulian{
+    font-family: Corbel, "Corbel", sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.liulian .liu{
+    color: #e94700;
+}
+
+.liulian .lian{
+    color: #4f4e4d;
+}
+
 /* .active {
     color: #e94700;
 } */
