@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private snackBar: MatSnackBar){}
+  constructor(private snackBar: MatSnackBar, private router: Router){}
 
   
   // openSnackBar(message) {
@@ -23,5 +24,10 @@ export class HomeComponent implements OnInit {
     this.snackBar.open('will be available soon', 'Dismiss', {duration: 1000});
     console.log('will be available soon');
   }
+
+  onSelect(product){
+    this.router.navigate(['/home', product]);
+  }
+
 
 }
