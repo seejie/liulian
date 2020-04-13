@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit {
     console.log('will be available soon');
   }
 
-  onSelect(product){
-    this.router.navigate(['/home', product]);
+  onSelect(menu){
+    this.router.navigate(['/home', menu]);
   }
 
 

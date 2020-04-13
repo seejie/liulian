@@ -1,0 +1,232 @@
+.product-header{
+    background: url('../../../../assets/img/banner/main-banner-image.jpg');
+    height: 120px; 
+    font-family: Corbel, "Corbel", sans-serif;
+
+}
+
+.product-header .icon-container{
+    color: #fdede2;
+}
+
+.product-header .icon-container ul{
+    font-size: 0.8em;
+    padding: 0px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.product-header .icon-container ul li{
+    display: inline;
+    padding: 5px 12px;
+    border: 1px solid #fdede278;
+}
+
+.product-header .icon-container ul li:first-child{
+    border-right: none;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.product-header .icon-container ul li:nth-child(2){
+    border-right: none;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.product-header .title-logo{
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    margin: auto;
+    width: 100%;
+}
+
+.m-no-container{
+    color: rgb(182, 181, 181);
+    padding: 0.5em 0em 0 2em;
+    font-family: Gothic, "Gothic", sans-serif;
+}
+
+.form__group {
+    position: relative;
+    padding: 25px 0 0;
+    margin-top: 10px;
+    width: 90%;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgba(182, 181, 181, 0.739);
+    outline: 0;
+    color: rgb(95, 93, 93);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 0.9rem;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: rgb(182, 181, 181);
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 2px;
+    border-image: linear-gradient(to right, #e94700, #ee9944);
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.9em;
+    color: #e94700;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+
+.m-no-container .input{
+    padding-top: 0.5em;
+}
+
+.m-no-container .input span{
+    font-weight: bold;
+    padding-right: 10px;;
+}
+ 
+
+.label{
+    color: rgb(182, 181, 181);
+    padding: 0em 0em 2em 0em;
+    font-family: Gothic, "Gothic", sans-serif;
+}
+
+
+.product-header .title-container{
+    font-size: 1em;
+    font-weight: 600;
+    color: #fdede2;
+    text-transform: capitalize;
+    display: block;
+}
+
+.product-header .title-container .title{
+    padding-top: 25px;
+    padding-left: 20px;
+    float: left;
+    font-family: Gothic, "Gothic", sans-serif;
+
+}
+
+.product-header .title-container .line{
+    border-bottom: 1px solid #fdede2ab;
+    float: right;
+    padding-top: 15px; 
+    width: 70%;  
+    height: 20px;
+}
+
+.product-logo-container{
+    padding: 2em;
+}
+
+.product-logo-container .logos{
+    height: 200px;
+}
+
+.product-logo-container .my-grid-tile{
+    border: 1px solid #dad7d5;
+    border-radius: 5px;
+    color: rgb(182, 181, 181);
+
+}
+
+.product-logo-container .active{
+    border: 2px solid #e94700;
+    color: #e94700;
+    box-shadow: 2px 5px 10px 2px rgba(126, 124, 124, 0.3);
+}
+
+.product-logo-container .active::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 70% auto, cover;
+    background-position: auto, right top;
+    background-repeat: no-repeat;
+}
+
+.product-logo-container .active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-image: 
+  url(http://www.clker.com/cliparts/p/e/X/9/d/4/check-mark-white-md.png), 
+  linear-gradient(-135deg, #ff8d5c 50%, transparent 50%);
+  background-size: 70% auto, cover;
+  background-position: auto, right top;
+  background-repeat: no-repeat;
+}
+
+mat-grid-tile div{
+    text-align: center;
+    font-family: Gothic, "Gothic", sans-serif;
+    font-weight: bold;
+}
+
+mat-grid-tile .myr-amount{
+    font-size: 1.3em;
+}
+
+mat-grid-tile .cny-amount{
+    font-size: 0.6em;
+}
+
+
+.main-btn-container{
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    margin: auto; 
+    text-align: center;
+}
+
+.main-btn-container button{
+    padding: 10px 80px;
+    border-radius: 50px;
+    border: none;
+    font-family: Gothic, "Gothic", sans-serif;
+    font-weight: 600;
+    color: #fff8f3;
+    letter-spacing: 1px;
+    background: url('../../../../assets/img/banner/main-banner-image.jpg');
+}

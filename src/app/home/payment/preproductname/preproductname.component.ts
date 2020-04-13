@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router'
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-preproductname',
@@ -9,23 +10,23 @@ import { ActivatedRoute} from '@angular/router'
 export class PreproductnameComponent implements OnInit {
 
   public isActive = true;
-  public id;
-  constructor(private route: ActivatedRoute) { }
+  public menu;
+  public productName = 'umobile';
+
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.paramMap.get('id');
-    this.id = id;
+    let menu = this.route.snapshot.paramMap.get('menu');
+    this.menu = menu;
   } 
 
   btnContinue(){
-    if((this.id == 'prepaid') || (this.id == 'games')){
-      console.log('selectampunt');
-    }else{
-      console.log('input paiment');
-    }
+       this.router.navigate(['/home/'+this.menu, this.productName]);
+ 
   }
 
   selectProduct(productName){
+    this.productName = productName;
     console.log(productName);
   }
 

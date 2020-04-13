@@ -8,6 +8,7 @@ import { TabbarComponent } from './tabbar/tabbar.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PreproductnameComponent } from './home/payment/preproductname/preproductname.component';
+import { ProductselectamountComponent } from './home/payment/productselectamount/productselectamount.component';
 
 const routes: Routes = [
   {path: '',          redirectTo: '/home', pathMatch: 'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'activity',  component: ActivityComponent},
 
   {path: 'home',      component: HomeComponent},
-  {path: 'home/:id',  component: PreproductnameComponent},
+  {path: 'home/:menu',  component: PreproductnameComponent},
+  {path: 'home/:menu/:product',  component: ProductselectamountComponent},
 
   {path: 'news',      component: NewsComponent},
   {path: 'profile',   component: ProfileComponent},
@@ -30,4 +32,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const routingComponents = [PromoComponent, ActivityComponent, HomeComponent, NewsComponent, ProfileComponent, NotFoundComponent,
-  PreproductnameComponent];
+  PreproductnameComponent, ProductselectamountComponent];
