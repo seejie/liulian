@@ -8,6 +8,7 @@ import { ActivatedRoute} from '@angular/router'
 })
 export class PreproductnameComponent implements OnInit {
 
+  public isActive = true;
   public id;
   constructor(private route: ActivatedRoute) { }
 
@@ -15,5 +16,17 @@ export class PreproductnameComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('id');
     this.id = id;
   } 
+
+  btnContinue(){
+    if((this.id == 'prepaid') || (this.id == 'games')){
+      console.log('selectampunt');
+    }else{
+      console.log('input paiment');
+    }
+  }
+
+  selectProduct(productName){
+    console.log(productName);
+  }
 
 }

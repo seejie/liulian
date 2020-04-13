@@ -10,10 +10,10 @@
 }
 
 .product-header .icon-container ul{
-    /* font-size: 1.1em; */
+    font-size: 0.8em;
     padding: 0px;
-    padding-top: 15px;
-    padding-left: 15px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .product-header .icon-container ul li{
@@ -46,7 +46,7 @@
 
 
 .product-header .title-container{
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 600;
     color: #fdede2;
     text-transform: capitalize;
@@ -54,15 +54,87 @@
 }
 
 .product-header .title-container .title{
-    padding-top: 30px;
+    padding-top: 25px;
     padding-left: 20px;
     float: left;
+    font-family: Gothic, "Gothic", sans-serif;
+
 }
 
 .product-header .title-container .line{
-    border-bottom: 1px solid #fdede2;
+    border-bottom: 1px solid #fdede2ab;
     float: right;
-    padding-top: 20px; 
+    padding-top: 15px; 
     width: 70%;  
     height: 20px;
+}
+
+.product-logo-container{
+    padding: 2em;
+}
+
+.product-logo-container .logos{
+    height: 200px;
+}
+
+.product-logo-container .my-grid-tile{
+    border: 1px solid #dad7d5;
+    border-radius: 5px;
+}
+
+.product-logo-container .active{
+    border: 2px solid #e94700;
+    box-shadow: 2px 5px 10px 2px rgba(126, 124, 124, 0.3);
+}
+
+.product-logo-container .active::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 70% auto, cover;
+    background-position: auto, right top;
+    background-repeat: no-repeat;
+}
+
+.product-logo-container .active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-image: 
+  url(http://www.clker.com/cliparts/p/e/X/9/d/4/check-mark-white-md.png), 
+  linear-gradient(-135deg, #ff8d5c 50%, transparent 50%);
+  background-size: 70% auto, cover;
+  background-position: auto, right top;
+  background-repeat: no-repeat;
+}
+ 
+mat-grid-tile img{
+    height: 50%;
+    width: auto;
+    /* background-color: slateblue; */
+}
+
+.main-btn-container{
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    margin: auto; 
+    text-align: center;
+}
+
+.main-btn-container button{
+    padding: 10px 80px;
+    border-radius: 50px;
+    border: none;
+    font-family: Gothic, "Gothic", sans-serif;
+    font-weight: 600;
+    color: #fff8f3;
+    letter-spacing: 1px;
+    background: url('../../../../assets/img/banner/main-banner-image.jpg');
 }
