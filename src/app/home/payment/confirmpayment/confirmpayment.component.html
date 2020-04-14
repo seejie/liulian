@@ -1,6 +1,10 @@
-<h2 mat-dialog-title>Confirm Payment</h2>
-<mat-dialog-content>A payment for {{data.account}} of {{data.amount}} will be made to {{data.name}}</mat-dialog-content> 
-<mat-dialog-actions>
-    <button mat-raised-button mat-dialog-close mat-dialog-close='false'>Cancel</button>
-    <button mat-raised-button mat-dialog-close mat-dialog-close='true'>Confirm</button>
-</mat-dialog-actions>
+<div class="model-container">
+    <h3 mat-dialog-title>Confirm Payment</h3>
+    <mat-dialog-content>
+        A payment for <span>+60 &ensp;  {{data.account}}</span> of <span>{{data.amount}}</span> will be made to <span>{{data.name}}</span>
+    </mat-dialog-content> 
+    <mat-dialog-actions>
+        <button class="btn-model" mat-dialog-close mat-dialog-close='false'>Cancel</button>
+        <button class="btn-model" mat-dialog-close mat-dialog-close='true'>Confirm</button>
+    </mat-dialog-actions>
+</div>

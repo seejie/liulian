@@ -1,0 +1,35 @@
+.model-container{
+    /* border: 1px solid #e94700; */
+    font-family: Corbel, "Corbel", sans-serif;
+    color: #777777;    
+}
+
+h3{
+    font-family: Corbel, "Corbel", sans-serif;
+
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+}
+
+.model-container span{
+    font: 600 14px/20px Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-dialog-content{
+    text-align: justify;
+}
+
+.btn-model{
+    margin: auto;
+    padding: 8px 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.0em;
+    font-family: Corbel, "Corbel", sans-serif;
+    font-weight: 500;
+    color: #fff8f3;
+    text-align: center;
+    /* letter-spacing: 1px; */
+    background: url('../../../../assets/img/banner/main-banner-image.jpg');
+}

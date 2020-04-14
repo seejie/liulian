@@ -34,6 +34,7 @@ export class ProductselectamountComponent implements OnInit {
   
   btnConfirmPayment(){
     if (this.productAmount != '' && this.productAccount != '') {
+    // if (true) {
 
       let dialogRef = this.dialog.open(ConfirmpaymentComponent, {data: {name: this.productName, amount: this.productAmount, account: this.productAccount}});
 
@@ -62,7 +63,10 @@ export class ProductselectamountComponent implements OnInit {
   }
 
   selectAmount(productAmount){
-    this.productAmount = productAmount;
+    let amount: any = parseInt(productAmount)*1.63;
+    let amountcny = parseFloat(amount).toFixed(2);
+    this.productAmount = productAmount+'RM/'+ amountcny  +'CNY';
+    this._productService.setProductAmount(this.productAmount);
     console.log(productAmount);
   }
 
