@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router'
 import {Router} from '@angular/router';
+import { ProductService } from 'src/app/product.service';
 
 @Component({
   selector: 'app-preproductname',
@@ -13,11 +14,13 @@ export class PreproductnameComponent implements OnInit {
   public menu;
   public productName = 'umobile';
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private _productService: ProductService) { }
 
   ngOnInit(): void {
-    let menu = this.route.snapshot.paramMap.get('menu');
-    this.menu = menu;
+    // let menu = this.route.snapshot.paramMap.get('menu');
+    
+    this.menu = this._productService.getMenu();
+    console.log(this._productService.getMenu());
   } 
 
   btnContinue(){

@@ -1,8 +1,11 @@
 .product-header{
     background: url('../../../../assets/img/banner/main-banner-image.jpg');
-    height: 120px; 
+    /* background: linear-gradient(-90deg, #e9be00dc, #e94700); */
+    height: 100px; 
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Corbel, "Corbel", sans-serif;
-
+    border-bottom: 2px solid #e94700;
 }
 
 .product-header .icon-container{
@@ -10,15 +13,18 @@
 }
 
 .product-header .icon-container ul{
+    /* padding-top: 20px;
+    padding-left: 20px; */
     font-size: 0.8em;
     padding: 0px;
-    padding-top: 20px;
-    padding-left: 20px;
+    position: fixed;
+    top: 1em;
+    left: 1.5em;
 }
 
 .product-header .icon-container ul li{
     display: inline;
-    padding: 5px 12px;
+    padding: 5px 16px;
     border: 1px solid #fdede278;
 }
 
@@ -38,7 +44,7 @@
     font-size: 1.3em;
     font-weight: bolder;
     text-align: center;
-    position: absolute;
+    position: relative;
     top: 50px;
     margin: auto;
     width: 100%;
@@ -46,6 +52,7 @@
 
 
 .product-header .title-container{
+    padding-top: 38px;
     font-size: 1em;
     font-weight: 600;
     color: #fdede2;
@@ -56,9 +63,16 @@
 .product-header .title-container .title{
     padding-top: 25px;
     padding-left: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
     float: left;
-    font-family: Gothic, "Gothic", sans-serif;
+    /* font-family: Gothic, "Gothic", sans-serif; */
+    font-family: Corbel, "Corbel", sans-serif;
 
+}
+
+.product-header .title-container .title span{
+    padding-right: 5px;
 }
 
 .product-header .title-container .line{
@@ -132,9 +146,10 @@ mat-grid-tile img{
     padding: 10px 80px;
     border-radius: 50px;
     border: none;
-    font-family: Gothic, "Gothic", sans-serif;
+    font-size: 1.1em;
+    font-family: Corbel, "Corbel", sans-serif;
     font-weight: 600;
     color: #fff8f3;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     background: url('../../../../assets/img/banner/main-banner-image.jpg');
 }

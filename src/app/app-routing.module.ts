@@ -18,10 +18,10 @@ const routes: Routes = [
 
   {path: 'home',      component: HomeComponent},
   {path: 'home/:menu',  component: PreproductnameComponent},
+
   {path: 'home/:menu/:product',  component: ProductselectamountComponent},
   
   {path: 'summery',  component: PaidsummeryComponent},
-
 
   {path: 'news',      component: NewsComponent},
   {path: 'profile',   component: ProfileComponent},

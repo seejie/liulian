@@ -14,34 +14,38 @@ export class ProductService {
 
   setMenu(menu){
     this.menu = menu;
+    localStorage.setItem('menu', menu);
   }
 
   setProductName(productName){
     this.productName = productName;
+    localStorage.setItem('productName', productName)
   }
 
   setProductAmount(productAmount){
     this.productAmount = productAmount;
+    localStorage.setItem('productAmount', productAmount);
   }
 
   setAccountNumber(accountNumber){
     this.accountNumber = accountNumber;
+    localStorage.setItem('accountNumber', accountNumber);
   }
    
   getMenu(){
-    return this.menu;
+    return this.menu = localStorage.getItem('menu');
   }
 
   getProductName(){
-    return this.productName;
+    return this.productName = localStorage.getItem('productName');
   }
 
   getProductAmount(){
-    return this.productName;
+    return this.productAmount = localStorage.getItem('productAmount');
   }
 
   getAccountNumber(){
-    return this.accountNumber;
+    return this.accountNumber = localStorage.getItem('accountNumber');
   }
 
 }

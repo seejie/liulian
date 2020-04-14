@@ -12,7 +12,7 @@ import { ProductService } from 'src/app/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private snackBar: MatSnackBar, private router: Router, private _productServive: ProductService){}
+  constructor(private snackBar: MatSnackBar, private router: Router, private _productService: ProductService){}
 
   
   // openSnackBar(message) {
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   }
 
   onSelect(menu){
-    this._productServive.setMenu(menu);
+    this._productService.setMenu(menu);
     this.router.navigate(['/home', menu]);
   }
 
