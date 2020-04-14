@@ -1,0 +1,290 @@
+.product-header{
+    background: url('../../../../assets/img/banner/main-banner-image.jpg');
+    /* background: linear-gradient(-90deg, #e9be00dc, #e94700); */
+    height: 100px; 
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Corbel, "Corbel", sans-serif;
+    border-bottom: 2px solid #e94700;
+}
+
+.product-header .icon-container{
+    color: #fdede2;
+}
+
+.product-header .icon-container ul{
+    /* padding-top: 20px;
+    padding-left: 20px; */
+    font-size: 0.8em;
+    padding: 0px;
+    position: absolute;
+    top: 1em;
+    left: 1.5em;
+}
+
+.product-header .icon-container ul li{
+    display: inline;
+    padding: 5px 16px;
+    border: 1px solid #fdede278;
+}
+
+.product-header .icon-container ul li:first-child{
+    border-right: none;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.product-header .icon-container ul li:nth-child(2){
+    border-right: none;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.product-header .title-logo{
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    margin: auto;
+    width: 100%;
+}
+
+.m-no-container{
+    color: rgb(182, 181, 181);
+    padding: 0.5em 0em 0 2em;
+    font-family: Corbel, "Corbel", sans-serif;
+}
+
+.mat-input-element {
+    caret-color: rgb(182, 181, 181);
+}
+
+mat-form-field.mat-form-field {
+    font-size: 1.1em;
+  }
+
+.placeholder{
+    font-size: 15px;
+}
+ 
+.placeholder{
+    color: rgb(182, 181, 181);
+}
+
+.mat-focused .placeholder {
+    color: #e94700;
+    font-size: 1.1em;
+}
+ 
+.form_group{
+    /* padding: 5px 0 0; */
+    margin-top: 10px;
+    width: 90%;
+}
+
+.form_field {
+    outline: 0;
+    color: rgb(175, 175, 175);
+    padding: 1px 0;
+    background: transparent; 
+    width: 100%;
+    font-size: 1.1em;
+  }
+
+  input::placeholder {
+    color: transparent;
+  }
+
+.form_group span{
+    font-size: 1.1em;  
+    color: rgb(124, 124, 124);
+    
+}
+
+/* .form__group {
+    font-family: Corbel, "Corbel", sans-serif;
+
+    position: relative;
+    padding: 25px 0 0;
+    margin-top: 10px;
+    width: 90%;
+  }
+  
+  .form__field {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(180, 179, 179, 0.561);
+    outline: 0;
+    color: rgb(175, 175, 175);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 0.9rem;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1em;
+    color: rgb(182, 181, 181);
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 1px;
+    border-image: linear-gradient(to right, #e94700, #ee9944);
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.9em;
+    color: #e94700;
+    font-weight: 700;
+  }
+  
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  } */
+
+.m-no-container .input{
+    padding-top: 0.5em;
+}
+
+.m-no-container .input span{
+    font-weight: normal;
+    font-size: 1.5em;
+    padding-right: 10px;;
+}
+ 
+
+.label{
+    color: rgb(182, 181, 181);
+    padding: 0em 0em 1.5em 0em;
+}
+
+
+.product-header .title-container{
+    padding-top: 38px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fdede2;
+    text-transform: capitalize;
+    display: block;
+}
+
+.product-header .title-container .title{
+    padding-top: 25px;
+    padding-left: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    float: left;
+    /* font-family: Gothic, "Gothic", sans-serif; */
+    font-family: Corbel, "Corbel", sans-serif;
+
+}
+
+.product-header .title-container .title span{
+    padding-right: 5px;
+}
+
+.product-header .title-container .line{
+    border-bottom: 1px solid #fdede2ab;
+    float: right;
+    padding-top: 15px; 
+    width: 50%;  
+    height: 20px;
+}
+
+.product-logo-container{
+    padding: 2em;
+    padding-top: 1em;
+}
+
+.product-logo-container .logos{
+    height: 200px;
+}
+
+.product-logo-container .my-grid-tile{
+    border: 1px solid #dad7d5;
+    border-radius: 5px;
+    color: rgb(182, 181, 181);
+}
+
+.product-logo-container .active{
+    border: 2px solid #e94700;
+    box-shadow: 1px 5px 10px 2px rgba(126, 124, 124, 0.39);
+}
+
+.product-logo-container .active::before{
+    content: '\2713';
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 4px;
+    top: 0;
+    right: -1px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(-135deg, #e48e6a 50%, transparent 50%);
+}
+
+mat-grid-tile div{
+    text-align: center;
+    font-weight: bold;
+}
+
+mat-grid-tile .myr-amount{
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+mat-grid-tile .myr-amount span{
+    font-size: 0.7em;
+}
+
+mat-grid-tile .cny-amount{
+    font-weight: 500;
+    font-size: 0.7em;
+}
+
+
+.main-btn-container{
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    margin: auto; 
+    text-align: center;
+}
+
+.main-btn-container button{
+    padding: 10px 80px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.1em;
+    font-family: Corbel, "Corbel", sans-serif;
+    font-weight: 500;
+    color: #fff8f3;
+    /* letter-spacing: 1px; */
+    background: url('../../../../assets/img/banner/main-banner-image.jpg');
+}
+
+.main-btn-container button:focus{
+    border: none;
+}
