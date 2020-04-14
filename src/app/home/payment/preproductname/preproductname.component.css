@@ -2,6 +2,7 @@
     background: url('../../../../assets/img/banner/main-banner-image.jpg');
     /* background: linear-gradient(-90deg, #e9be00dc, #e94700); */
     height: 100px; 
+    width: auto;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Corbel, "Corbel", sans-serif;
@@ -98,34 +99,23 @@
 
 .product-logo-container .active{
     border: 2px solid #e94700;
-    box-shadow: 2px 5px 10px 2px rgba(126, 124, 124, 0.3);
+    box-shadow: 1px 5px 10px 2px rgba(126, 124, 124, 0.39);
 }
 
-.product-logo-container .active::before{
-    content: '';
+
+ .product-logo-container .active::before{
+    content: '\2713';
     position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 4px;
     top: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    background-size: 70% auto, cover;
-    background-position: auto, right top;
-    background-repeat: no-repeat;
-}
-
-.product-logo-container .active::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 24px;
-  height: 24px;
-  background-image: 
-  url(http://www.clker.com/cliparts/p/e/X/9/d/4/check-mark-white-md.png), 
-  linear-gradient(-135deg, #ff8d5c 50%, transparent 50%);
-  background-size: 70% auto, cover;
-  background-position: auto, right top;
-  background-repeat: no-repeat;
+    right: -1px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(-135deg, #e48e6a 50%, transparent 50%);
 }
  
 mat-grid-tile img{

@@ -17,28 +17,31 @@
              {{menu}}</div>
         <div class="line"></div>
     </div>
+    
+    <!-- {{productName}} -->
+
 </div>
 
 <div class="product-logo-container">
     <div class="logos">
         <mat-grid-list cols="3" gutterSize="10px" rowHeight="2:1.4">
             
-            <mat-grid-tile routerLinkActive="active" class="my-grid-tile"  (click)="selectProduct('celcom')">
+            <mat-grid-tile class="my-grid-tile" [class.active] = "isActive" (click)="selectProduct('celcom')">
                 <img src="../../../../assets/img/product/celcom.png" alt="">
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile" (click)="selectProduct('umobile')">
+            <mat-grid-tile  class="my-grid-tile active" (click)="selectProduct('umobile')">
                 <img src="../../../../assets/img/product/umobile.png" alt="">
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile" (click)="selectProduct('redone')">
+            <mat-grid-tile class="my-grid-tile" [class.active] = "isActive" (click)="selectProduct('redone')">
                 <img src="../../../../assets/img/product/redone.png" alt="">
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile active" (click)="selectProduct('hotlink')">
+            <mat-grid-tile class="my-grid-tile" [class.active] = "isActive" (click)="selectProduct('hotlink')">
                 <img src="../../../../assets/img/product/hotlink.png" alt="">
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile" (click)="selectProduct('maxis')">
+            <mat-grid-tile class="my-grid-tile" [class.active] = "isActive" (click)="selectProduct('maxis')">
                 <img src="../../../../assets/img/product/maxis.png" alt="">
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile" (click)="selectProduct('tunetalk')">
+            <mat-grid-tile class="my-grid-tile" [class.active] = "isActive" (click)="selectProduct('tunetalk')">
                 <img src="../../../../assets/img/product/tunetalk.png" alt="">
             </mat-grid-tile>
                         

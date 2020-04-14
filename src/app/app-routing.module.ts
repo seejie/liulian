@@ -10,6 +10,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PreproductnameComponent } from './home/payment/preproductname/preproductname.component';
 import { ProductselectamountComponent } from './home/payment/productselectamount/productselectamount.component';
 import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.component';
+import { ProductinamountComponent } from './home/payment/productinamount/productinamount.component';
 
 const routes: Routes = [
   {path: '',          redirectTo: '/home', pathMatch: 'full'},
@@ -19,7 +20,15 @@ const routes: Routes = [
   {path: 'home',      component: HomeComponent},
   {path: 'home/:menu',  component: PreproductnameComponent},
 
-  {path: 'home/:menu/:product',  component: ProductselectamountComponent},
+  {path: 'home/prepaid/:product',  component: ProductselectamountComponent},
+  {path: 'home/games/:product',  component: ProductselectamountComponent},
+
+  {path: 'home/postpaid/:product', component:ProductinamountComponent},
+  {path: 'home/water/:product', component:ProductinamountComponent},
+  {path: 'home/electricity/:product', component:ProductinamountComponent},
+  {path: 'home/internet/:product', component:ProductinamountComponent},
+  {path: 'home/television/:product', component:ProductinamountComponent},
+
   
   {path: 'summery',  component: PaidsummeryComponent},
 
