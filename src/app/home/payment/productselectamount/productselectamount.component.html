@@ -5,63 +5,67 @@
             <li><fa-icon [icon]="['fas', 'home']"></fa-icon></li>
         </ul>
     </div>
-    <div class="title-logo">
-        <div class="liulian">
-            <span class="liu">LIU</span>
-            <span class="lian">LIAN</span>
-        </div>
-    </div>
+    
     <div class="title-container">
-        <div class="title">{{productName}}</div>
+        <div class="title">{{productName}} &ensp; {{productMenu}}</div>
         <div class="line"></div>
     </div>
 </div>
 
 <div class="m-no-container">
-    <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Mobile Number" name="name" id='name' required />
+    <!-- <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Mobile Number" name="name" id='name' required value="+60"/>
         <label for="name" class="form__label">Mobile Number</label>
-      </div>
+      </div> -->
+    <mat-form-field class="form_group">
+        <span matPrefix>+60 &nbsp;</span>
+        <input (keyup)="onKey($event)" class="form_field" type="tel" matInput >
+        <mat-placeholder class="placeholder">Mobile Number</mat-placeholder>
+        <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+    </mat-form-field>
 </div>
+
+
+
 
 <div class="product-logo-container">
     <div class="label">Amount</div>
     <div class="logos">
         <mat-grid-list cols="3" gutterSize="10px" rowHeight="2:1.4">
             
-            <mat-grid-tile class="my-grid-tile"  (click)="selectAmount('celcom')">
+            <mat-grid-tile class="my-grid-tile"  (click)="selectAmount(10)">
                 <div>
-                    <div class="myr-amount">RM 10</div>
+                    <div class="myr-amount"><span>MYR</span> 10</div>
                     <div class="cny-amount">10RM/17.46CNY</div>
                 </div>
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile" (click)="selectAmount('umobile')">
+            <mat-grid-tile class="my-grid-tile" (click)="selectAmount(20)">
                 <div>
-                    <div class="myr-amount">RM 20</div>
+                    <div class="myr-amount"><span>MYR</span> 20</div>
                     <div class="cny-amount">20RM/34.60CNY</div>
                 </div>            
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile" (click)="selectAmount('redone')">
+            <mat-grid-tile class="my-grid-tile" (click)="selectAmount(50)">
                 <div>
-                    <div class="myr-amount">RM 50</div>
+                    <div class="myr-amount"><span>MYR</span> 50</div>
                     <div class="cny-amount">50RM/86.20CNY</div>
                 </div>            
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile active" (click)="selectAmount('hotlink')">
+            <mat-grid-tile class="my-grid-tile active" (click)="selectAmount(100)">
                 <div>
-                    <div class="myr-amount">RM 100</div>
+                    <div class="myr-amount"><span>MYR</span> 100</div>
                     <div class="cny-amount">100RM/172.46CNY</div>
                 </div>
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile" (click)="selectAmount('maxis')">
+            <mat-grid-tile class="my-grid-tile" (click)="selectAmount(150)">
                 <div>
-                    <div class="myr-amount">RM 150</div>
+                    <div class="myr-amount"><span>MYR</span> 150</div>
                     <div class="cny-amount">150RM/258.60CNY</div>
                 </div>          
             </mat-grid-tile>
-            <mat-grid-tile class="my-grid-tile" (click)="selectAmount('tunetalk')">
+            <mat-grid-tile class="my-grid-tile" (click)="selectAmount(200)">
                 <div>
-                    <div class="myr-amount">RM 200</div>
+                    <div class="myr-amount"><span>MYR</span> 200</div>
                     <div class="cny-amount">200RM/344.80CNY</div>
                 </div>           
             </mat-grid-tile>
@@ -71,6 +75,6 @@
 </div>
 
 <div class="main-btn-container">
-    <button (click)="btnMakePayment()" class="btn-main">Confirm Payment</button>
+    <button (click)="btnConfirmPayment()" class="btn-main">Confirm Payment</button>
 </div>
 

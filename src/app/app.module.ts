@@ -16,6 +16,7 @@ import { ProductselectamountComponent } from './home/payment/productselectamount
 import { ProductinamountComponent } from './home/payment/productinamount/productinamount.component';
 import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.component';
 import { ProductService } from './product.service';
+import { ConfirmpaymentComponent } from './home/payment/confirmpayment/confirmpayment.component';
 
 
 @NgModule({
@@ -27,7 +28,11 @@ import { ProductService } from './product.service';
     PreproductnameComponent,
     ProductselectamountComponent,
     ProductinamountComponent,
-    PaidsummeryComponent
+    PaidsummeryComponent,
+    ConfirmpaymentComponent
+  ],
+  entryComponents: [
+    ConfirmpaymentComponent,
   ],
   imports: [
     BrowserModule,

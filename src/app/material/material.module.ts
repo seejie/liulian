@@ -6,6 +6,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const material = [
   MatButtonModule,
@@ -13,7 +16,10 @@ const material = [
   MatGridListModule,
   MatIconModule,
   MatDividerModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDialogModule,
 ]
 
 @NgModule({
