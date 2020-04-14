@@ -14,7 +14,8 @@ export class TabbarComponent implements OnInit {
   }
 
   availableSoon(){
-    this.snackBar.open('will be available soon', 'Dismiss', {duration: 90000});
+    this.snackBar.open('will be available soon', 'Dismiss', {duration: 1000});
+    console.log('click');
   }
 
 }
