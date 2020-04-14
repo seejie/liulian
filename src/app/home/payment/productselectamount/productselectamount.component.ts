@@ -31,7 +31,7 @@ export class ProductselectamountComponent implements OnInit {
   }
   
   btnMakePayment(){
-    this.router.navigate(['/home/'+this.menu, this.productName]);
+    this.router.navigate(['/summery']);
   }
 
   selectAmount(productAmount){

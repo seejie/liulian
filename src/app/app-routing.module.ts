@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PreproductnameComponent } from './home/payment/preproductname/preproductname.component';
 import { ProductselectamountComponent } from './home/payment/productselectamount/productselectamount.component';
+import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.component';
 
 const routes: Routes = [
   {path: '',          redirectTo: '/home', pathMatch: 'full'},
@@ -18,6 +19,9 @@ const routes: Routes = [
   {path: 'home',      component: HomeComponent},
   {path: 'home/:menu',  component: PreproductnameComponent},
   {path: 'home/:menu/:product',  component: ProductselectamountComponent},
+  
+  {path: 'summery',  component: PaidsummeryComponent},
+
 
   {path: 'news',      component: NewsComponent},
   {path: 'profile',   component: ProfileComponent},

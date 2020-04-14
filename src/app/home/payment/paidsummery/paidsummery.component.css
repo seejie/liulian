@@ -1,0 +1,88 @@
+.product-header{
+    background: url('../../../../assets/img/banner/summery-banner-image.jpg');
+    height: 180px; 
+    font-family: Corbel, "Corbel", sans-serif;
+}
+ 
+.message-container{
+    padding: 1em;
+    font-family: Gothic, "Gothic", sans-serif;
+    text-align: center;
+}
+
+.message{
+    margin: auto;
+    height: 180px;
+    width: 80%;
+    font-weight: 400;
+    color: #fff8f3;
+    padding-top: 1em;
+}
+.icon{
+    font-size: 5em;
+}
+.title{
+    padding-top: 0.5em;
+    font-size: 1.5em;
+}
+.description{
+    padding-top: 2em;
+}
+
+.ref-container{
+    padding: 2em 1em 1em 1em;
+    text-align: left;
+}
+
+mat-grid-tile{
+    text-align: left;
+    /* background-color: chartreuse; */
+}
+
+.inside-grid {
+    position: absolute;
+    left: 2em;
+  }
+
+.label{
+    font-size: 0.9em;
+    color: #aca8a5;
+    font-family: Corbel, "Corbel", sans-serif;
+    /* background-color: rgb(172, 140, 147); */
+    width: 100%;
+}
+
+.text{
+    color: #8f8e8d;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.main-btn-container{
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    margin: auto; 
+    text-align: center;
+}
+
+.custom-hr{
+    height: 1px;
+    background-color: rgba(204, 204, 204, 0.527);
+    border: none;
+}
+
+.more-info{
+    padding-left: 2em;
+}
+
+.main-btn-container button{
+    padding: 10px 80px;
+    border-radius: 50px;
+    border: none;
+    font-family: Gothic, "Gothic", sans-serif;
+    font-weight: 600;
+    color: #fff8f3;
+    letter-spacing: 1px;
+    background: url('../../../../assets/img/banner/main-banner-image.jpg');
+}

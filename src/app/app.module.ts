@@ -14,6 +14,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { PreproductnameComponent } from './home/payment/preproductname/preproductname.component';
 import { ProductselectamountComponent } from './home/payment/productselectamount/productselectamount.component';
 import { ProductinamountComponent } from './home/payment/productinamount/productinamount.component';
+import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProductinamountComponent } from './home/payment/productinamount/product
     NotFoundComponent,
     PreproductnameComponent,
     ProductselectamountComponent,
-    ProductinamountComponent
+    ProductinamountComponent,
+    PaidsummeryComponent
   ],
   imports: [
     BrowserModule,
