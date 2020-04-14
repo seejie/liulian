@@ -3,6 +3,7 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {Router} from '@angular/router';
+import { ProductService } from 'src/app/product.service';
 
 @Component({
   selector: 'app-home',
@@ -11,13 +12,14 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private snackBar: MatSnackBar, private router: Router){}
+  constructor(private snackBar: MatSnackBar, private router: Router, private _productServive: ProductService){}
 
   
   // openSnackBar(message) {
   // }
 
   ngOnInit(): void {
+    // this.menu = this._productServive.getMenu();
   }
 
   futureMessage(){
@@ -26,6 +28,7 @@ export class HomeComponent implements OnInit {
   }
 
   onSelect(menu){
+    this._productServive.setMenu(menu);
     this.router.navigate(['/home', menu]);
   }
 

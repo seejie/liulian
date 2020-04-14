@@ -15,6 +15,7 @@ import { PreproductnameComponent } from './home/payment/preproductname/preproduc
 import { ProductselectamountComponent } from './home/payment/productselectamount/productselectamount.component';
 import { ProductinamountComponent } from './home/payment/productinamount/productinamount.component';
 import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.component';
+import { ProductService } from './product.service';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.com
     MatCarouselModule.forRoot(),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
