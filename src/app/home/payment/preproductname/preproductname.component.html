@@ -29,7 +29,14 @@
     <div class="logos">
         <mat-grid-list cols="3" gutterSize="10px" rowHeight="2:1.4">
 
-            <mat-grid-tile class="my-grid-tile" [class.active]="isActive" (click)="selectProduct('celcom')">
+
+
+            <mat-grid-tile class="my-grid-tile" (click)="selectProduct('umobile')" *ngFor="let product of productList['data']">
+                <!-- <img src="../../../../assets/img/product/umobile.png" alt="">  -->
+                {{product.product_name}}
+            </mat-grid-tile>
+
+            <!-- <mat-grid-tile class="my-grid-tile" [class.active]="isActive" (click)="selectProduct('celcom')">
                 <img src="../../../../assets/img/product/celcom.png" alt="">
             </mat-grid-tile>
             <mat-grid-tile class="my-grid-tile active" (click)="selectProduct('umobile')">
@@ -46,7 +53,7 @@
             </mat-grid-tile>
             <mat-grid-tile class="my-grid-tile" [class.active]="isActive" (click)="selectProduct('tunetalk')">
                 <img src="../../../../assets/img/product/tunetalk.png" alt="">
-            </mat-grid-tile>
+            </mat-grid-tile> -->
 
         </mat-grid-list>
     </div>

@@ -14,11 +14,14 @@ export class PreproductnameComponent implements OnInit {
 
   public isActive = false;
   public menu;
+  public test_var = '';
   public productName = '';
-  public productList : any;
+  productList : Array<any>;
 
   constructor(private route: ActivatedRoute, private router: Router, private _productService: ProductService,
-     private snackBar: MatSnackBar, private _menuProductService: MenuproductService) { }
+     private snackBar: MatSnackBar, private _menuProductService: MenuproductService) {
+       this.productList = new Array<any>();
+      }
 
   ngOnInit(): void {
     // let menu = this.route.snapshot.paramMap.get('menu');
@@ -40,6 +43,13 @@ export class PreproductnameComponent implements OnInit {
     this.menu = this._productService.getMenu();
     // console.log(this._productService.getMenu());
   } 
+
+  test(){
+    this._menuProductService.getMenuProducts(this._productService.getMenu())
+            .subscribe(data => {
+              this.productList = data;
+            });
+  };
 
   btnContinue(){
       if (this.productName == '') {
