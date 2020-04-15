@@ -17,6 +17,8 @@ export class PreproductnameComponent implements OnInit {
   public test_var = '';
   public productName = '';
   productList : Array<any>;
+  public loaded = false;
+  public isHidden = false;
 
   constructor(private route: ActivatedRoute, private router: Router, private _productService: ProductService,
      private snackBar: MatSnackBar, private _menuProductService: MenuproductService) {
@@ -25,12 +27,14 @@ export class PreproductnameComponent implements OnInit {
 
   ngOnInit(): void {
     // let menu = this.route.snapshot.paramMap.get('menu');
+    this.loaded = true;
 
     if (this._productService.getMenu() != '') {
 
     this._menuProductService.getMenuProducts(this._productService.getMenu())
             .subscribe(data => {
               this.productList = data;
+              this.isHidden = true;
               // console.log(data);
             });
     } else {

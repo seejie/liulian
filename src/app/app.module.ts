@@ -17,6 +17,7 @@ import { ProductinamountComponent } from './home/payment/productinamount/product
 import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.component';
 import { ProductService } from './product.service';
 import { ConfirmpaymentComponent } from './home/payment/confirmpayment/confirmpayment.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 import {HttpClientModule} from '@angular/common/http'
 
@@ -43,6 +44,7 @@ import {HttpClientModule} from '@angular/common/http'
     MatCarouselModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxSkeletonLoaderModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

@@ -83,9 +83,13 @@ mat-grid-tile {
     padding: 10px 80px;
     border-radius: 50px;
     border: none;
-    font-family: Gothic, "Gothic", sans-serif;
+    /* font-family: Gothic, "Gothic", sans-serif; */
     font-weight: 600;
     color: #fff8f3;
     letter-spacing: 1px;
     background: url('../../../../assets/img/banner/main-banner-image.jpg');
+}
+
+.btn-main {
+    font-weight: 400;
 }

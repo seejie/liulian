@@ -29,6 +29,15 @@
     <div class="logos">
         <mat-grid-list cols="3" gutterSize="10px" rowHeight="2:1.4">
 
+            <div [hidden]="isHidden">
+                <ngx-skeleton-loader count="9" [theme]="{ 
+                    'border-radius': '5px',
+                    height: '80px', width: '33%',
+                    'background-color': 'rgba(0, 0, 0, 0.1)',
+                    border: '1px solid white'
+                  }">
+                </ngx-skeleton-loader>
+            </div>
 
 
             <mat-grid-tile class="my-grid-tile" (click)="selectProduct(product.product_id, product.product_name)" *ngFor="let product of productList['data']">
@@ -60,5 +69,5 @@
 </div>
 
 <div class="main-btn-container">
-    <button (click)="btnContinue()" class="btn-main">Continue</button>
+    <button (click)="btnContinue()" class="btn-main">下一步</button>
 </div>
