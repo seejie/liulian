@@ -44,13 +44,6 @@ export class PreproductnameComponent implements OnInit {
     // console.log(this._productService.getMenu());
   } 
 
-  test(){
-    this._menuProductService.getMenuProducts(this._productService.getMenu())
-            .subscribe(data => {
-              this.productList = data;
-            });
-  };
-
   btnContinue(){
       if (this.productName == '') {
         this.snackBar.open('select product', 'Dismiss', {duration: 1000});
@@ -59,8 +52,8 @@ export class PreproductnameComponent implements OnInit {
       }
   }
 
-  selectProduct(productName){
-    this._productService.setProductName(productName);
+  selectProduct(productId,productName){
+    this._productService.setProductName(productId, productName);
     this.productName = productName;
     console.log(productName);
 

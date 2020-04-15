@@ -9,6 +9,7 @@ export class ProductService {
   productName: any;
   productAmount: any;
   accountNumber: any;
+  productId: any;
 
   constructor() {}
 
@@ -17,9 +18,11 @@ export class ProductService {
     localStorage.setItem('menu', menu);
   }
 
-  setProductName(productName){
+  setProductName(productId, productName){
     this.productName = productName;
     localStorage.setItem('productName', productName)
+    this.productId = productId;
+    localStorage.setItem('productId', productId)
   }
 
   setProductAmount(productAmount){
@@ -38,6 +41,10 @@ export class ProductService {
 
   getProductName(){
     return this.productName = localStorage.getItem('productName');
+  }
+
+  getProductId(){
+    return this.productId = localStorage.getItem('productId');
   }
 
   getProductAmount(){
