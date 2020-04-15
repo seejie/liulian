@@ -15,10 +15,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private snackBar: MatSnackBar, private router: Router, private _productService: ProductService){}
 
-  
-  // openSnackBar(message) {
-  // }
-
   ngOnInit(): void {
     // this.menu = this._productServive.getMenu();
   }
