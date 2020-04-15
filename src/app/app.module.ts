@@ -18,6 +18,7 @@ import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.com
 import { ProductService } from './product.service';
 import { ConfirmpaymentComponent } from './home/payment/confirmpayment/confirmpayment.component';
 
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ConfirmpaymentComponent } from './home/payment/confirmpayment/confirmpa
     AppRoutingModule,
     MatCarouselModule.forRoot(),
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

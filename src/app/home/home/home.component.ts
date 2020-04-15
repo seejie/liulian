@@ -4,6 +4,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {Router} from '@angular/router';
 import { ProductService } from 'src/app/product.service';
+import { MenuproductService } from 'src/app/service/menuproduct.service';
 
 @Component({
   selector: 'app-home',
