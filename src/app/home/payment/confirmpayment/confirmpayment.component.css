@@ -1,26 +1,25 @@
-.model-container{
+.model-container {
     /* border: 1px solid #e94700; */
     font-family: Corbel, "Corbel", sans-serif;
-    color: #777777;    
+    color: #777777;
 }
 
-h3{
+h3 {
     font-family: Corbel, "Corbel", sans-serif;
-
     font-weight: bold;
     font-size: 1em;
     text-align: center;
 }
 
-.model-container span{
+.model-container span {
     font: 600 14px/20px Roboto, "Helvetica Neue", sans-serif;
 }
 
-mat-dialog-content{
+mat-dialog-content {
     text-align: justify;
 }
 
-.btn-model{
+.btn-model {
     margin: auto;
     padding: 8px 30px;
     border-radius: 50px;

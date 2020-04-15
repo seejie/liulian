@@ -1,7 +1,7 @@
-.product-header{
+.product-header {
     background: url('../../../../assets/img/banner/main-banner-image.jpg');
     /* background: linear-gradient(-90deg, #e9be00dc, #e94700); */
-    height: 100px; 
+    height: 100px;
     width: auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,11 +9,11 @@
     border-bottom: 2px solid #e94700;
 }
 
-.product-header .icon-container{
+.product-header .icon-container {
     color: #fdede2;
 }
 
-.product-header .icon-container ul{
+.product-header .icon-container ul {
     /* padding-top: 20px;
     padding-left: 20px; */
     font-size: 0.8em;
@@ -23,25 +23,25 @@
     left: 1.5em;
 }
 
-.product-header .icon-container ul li{
+.product-header .icon-container ul li {
     display: inline;
     padding: 5px 16px;
     border: 1px solid #fdede278;
 }
 
-.product-header .icon-container ul li:first-child{
+.product-header .icon-container ul li:first-child {
     border-right: none;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
 }
 
-.product-header .icon-container ul li:nth-child(2){
+.product-header .icon-container ul li:nth-child(2) {
     border-right: none;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
 }
 
-.product-header .title-logo{
+.product-header .title-logo {
     font-size: 1.3em;
     font-weight: bolder;
     text-align: center;
@@ -51,8 +51,7 @@
     width: 100%;
 }
 
-
-.product-header .title-container{
+.product-header .title-container {
     padding-top: 38px;
     font-size: 1em;
     font-weight: 600;
@@ -61,7 +60,7 @@
     display: block;
 }
 
-.product-header .title-container .title{
+.product-header .title-container .title {
     padding-top: 25px;
     padding-left: 20px;
     font-size: 1.2em;
@@ -69,41 +68,39 @@
     float: left;
     /* font-family: Gothic, "Gothic", sans-serif; */
     font-family: Corbel, "Corbel", sans-serif;
-
 }
 
-.product-header .title-container .title span{
+.product-header .title-container .title span {
     padding-right: 5px;
 }
 
-.product-header .title-container .line{
+.product-header .title-container .line {
     border-bottom: 1px solid #fdede2ab;
     float: right;
-    padding-top: 15px; 
-    width: 70%;  
+    padding-top: 15px;
+    width: 70%;
     height: 20px;
 }
 
-.product-logo-container{
+.product-logo-container {
     padding: 2em;
 }
 
-.product-logo-container .logos{
+.product-logo-container .logos {
     height: 200px;
 }
 
-.product-logo-container .my-grid-tile{
+.product-logo-container .my-grid-tile {
     border: 1px solid #dad7d5;
     border-radius: 5px;
 }
 
-.product-logo-container .active{
+.product-logo-container .active {
     border: 2px solid #e94700;
     box-shadow: 1px 5px 10px 2px rgba(126, 124, 124, 0.39);
 }
 
-
- .product-logo-container .active::before{
+.product-logo-container .active::before {
     content: '\2713';
     position: absolute;
     color: #ffffff;
@@ -117,22 +114,22 @@
     height: 28px;
     background: linear-gradient(-135deg, #e48e6a 50%, transparent 50%);
 }
- 
-mat-grid-tile img{
+
+mat-grid-tile img {
     height: 50%;
     width: auto;
     /* background-color: slateblue; */
 }
 
-.main-btn-container{
+.main-btn-container {
     position: fixed;
     bottom: 30px;
     width: 100%;
-    margin: auto; 
+    margin: auto;
     text-align: center;
 }
 
-.main-btn-container button{
+.main-btn-container button {
     padding: 10px 80px;
     border-radius: 50px;
     border: none;

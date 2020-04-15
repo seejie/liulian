@@ -10,7 +10,13 @@
     src: url(assets/font/GOTHIC.TTF) format("opentype");
 }
 
-.mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6 {
+.mat-toolbar,
+.mat-toolbar h1,
+.mat-toolbar h2,
+.mat-toolbar h3,
+.mat-toolbar h4,
+.mat-toolbar h5,
+.mat-toolbar h6 {
     font: 500 20px/16px Corbel, "Corbel", sans-serif;
     letter-spacing: normal;
     margin: 0;
@@ -27,21 +33,21 @@ body {
     background: #faf7f5;
 }
 
-.liulian{
+.liulian {
     font-family: Corbel, "Corbel", sans-serif;
     font-weight: bold;
     font-size: 1.5em;
 }
 
-.liulian .liu{
+.liulian .liu {
     color: #e94700;
 }
 
-.liulian .lian{
+.liulian .lian {
     color: #4f4e4d;
 }
+
 
 /* .active {
     color: #e94700;
 } */
-

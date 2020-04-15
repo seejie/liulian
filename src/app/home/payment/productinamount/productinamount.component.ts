@@ -38,6 +38,8 @@ export class ProductinamountComponent implements OnInit {
       let dialogRef = this.dialog.open(ConfirmpaymentComponent, {data: {name: this.productName, amount: this.productAmount, account: this.productAccount}});
 
       dialogRef.afterClosed().subscribe(result => {
+        this.router.navigate(['/summery']);
+        
         console.log('Dialog result: '+ result);
       });
 
@@ -51,7 +53,6 @@ export class ProductinamountComponent implements OnInit {
       } 
       
       this.snackBar.open(message, 'Dismiss', {duration: 3000});
-      
     }
     
 
@@ -68,7 +69,14 @@ export class ProductinamountComponent implements OnInit {
   
   amount(event: any) { // without type info
     this.productAmount = event.target.value;
-    this._productService.setAccountNumber(event.target.value);
+    // this._productService.setAccountNumber(event.target.value);
+
+    let amount: any = parseInt(this.productAmount)*1.63;
+    let amountcny = parseFloat(amount).toFixed(2);
+    this.productAmount = this.productAmount+'RM/'+ amountcny  +'CNY';
+    this._productService.setProductAmount(this.productAmount);
+
+
     // console.log(this.productAccount);
   }
   

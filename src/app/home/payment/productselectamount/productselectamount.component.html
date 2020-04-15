@@ -1,11 +1,15 @@
 <div class="product-header">
     <div class="icon-container">
         <ul style="margin-block-start: 1em;margin-block-end: 1em;">
-            <li><fa-icon [icon]="['fas', 'chevron-left']"></fa-icon></li>
-            <li><fa-icon [icon]="['fas', 'home']"></fa-icon></li>
+            <li>
+                <fa-icon [icon]="['fas', 'chevron-left']"></fa-icon>
+            </li>
+            <li>
+                <fa-icon [icon]="['fas', 'home']"></fa-icon>
+            </li>
         </ul>
     </div>
-    
+
     <div class="title-container">
         <div class="title">{{productName}} &ensp; {{productMenu}}</div>
         <div class="line"></div>
@@ -19,21 +23,18 @@
       </div> -->
     <mat-form-field class="form_group">
         <span matPrefix>+60 &nbsp;</span>
-        <input (keyup)="onKey($event)" class="form_field" type="tel" matInput >
+        <input (keyup)="onKey($event)" class="form_field" type="tel" matInput>
         <mat-placeholder class="placeholder">Mobile Number</mat-placeholder>
         <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
     </mat-form-field>
 </div>
 
-
-
-
 <div class="product-logo-container">
     <div class="label">Amount</div>
     <div class="logos">
         <mat-grid-list cols="3" gutterSize="10px" rowHeight="2:1.4">
-            
-            <mat-grid-tile class="my-grid-tile"  (click)="selectAmount(10)">
+
+            <mat-grid-tile class="my-grid-tile" (click)="selectAmount(10)">
                 <div>
                     <div class="myr-amount"><span>MYR</span> 10</div>
                     <div class="cny-amount">10RM/17.46CNY</div>
@@ -43,13 +44,13 @@
                 <div>
                     <div class="myr-amount"><span>MYR</span> 20</div>
                     <div class="cny-amount">20RM/34.60CNY</div>
-                </div>            
+                </div>
             </mat-grid-tile>
             <mat-grid-tile class="my-grid-tile" (click)="selectAmount(50)">
                 <div>
                     <div class="myr-amount"><span>MYR</span> 50</div>
                     <div class="cny-amount">50RM/86.20CNY</div>
-                </div>            
+                </div>
             </mat-grid-tile>
             <mat-grid-tile class="my-grid-tile active" (click)="selectAmount(100)">
                 <div>
@@ -61,20 +62,19 @@
                 <div>
                     <div class="myr-amount"><span>MYR</span> 150</div>
                     <div class="cny-amount">150RM/258.60CNY</div>
-                </div>          
+                </div>
             </mat-grid-tile>
             <mat-grid-tile class="my-grid-tile" (click)="selectAmount(200)">
                 <div>
                     <div class="myr-amount"><span>MYR</span> 200</div>
                     <div class="cny-amount">200RM/344.80CNY</div>
-                </div>           
+                </div>
             </mat-grid-tile>
-                        
-        </mat-grid-list>  
+
+        </mat-grid-list>
     </div>
 </div>
 
 <div class="main-btn-container">
     <button (click)="btnConfirmPayment()" class="btn-main">Confirm Payment</button>
 </div>
-

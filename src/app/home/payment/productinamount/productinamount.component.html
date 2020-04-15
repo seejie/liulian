@@ -1,33 +1,35 @@
 <div class="product-header">
     <div class="icon-container">
         <ul style="margin-block-start: 1em;margin-block-end: 1em;">
-            <li><fa-icon [icon]="['fas', 'chevron-left']"></fa-icon></li>
-            <li><fa-icon [icon]="['fas', 'home']"></fa-icon></li>
+            <li>
+                <fa-icon [icon]="['fas', 'chevron-left']"></fa-icon>
+            </li>
+            <li>
+                <fa-icon [icon]="['fas', 'home']"></fa-icon>
+            </li>
         </ul>
     </div>
-    
+
     <div class="title-container">
         <div class="title">{{productName}} &ensp; {{productMenu}}</div>
         <div class="line"></div>
     </div>
 </div>
 
-<div class="m-no-container"> 
+<div class="m-no-container">
     <mat-form-field class="form_group">
-        <input (keyup)="account($event)" class="form_field" type="text" matInput >
+        <input (keyup)="account($event)" class="form_field" type="text" matInput>
         <mat-placeholder class="placeholder">Account Number</mat-placeholder>
         <mat-icon matSuffix>mode_edit</mat-icon>
     </mat-form-field>
     <mat-form-field class="form_group">
         <span matPrefix>RM &nbsp;</span>
-        <input (keyup)="amount($event)" class="form_field" type="number" matInput >
+        <input (keyup)="amount($event)" class="form_field" type="number" matInput>
         <mat-placeholder class="placeholder">Amount</mat-placeholder>
         <mat-icon matSuffix>mode_edit</mat-icon>
     </mat-form-field>
 </div>
 
-
 <div class="main-btn-container">
     <button (click)="btnConfirmPayment()" class="btn-main">Confirm Payment</button>
 </div>
-

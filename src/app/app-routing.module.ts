@@ -29,7 +29,6 @@ const routes: Routes = [
   {path: 'home/internet/:product', component:ProductinamountComponent},
   {path: 'home/television/:product', component:ProductinamountComponent},
 
-  
   {path: 'summery',  component: PaidsummeryComponent},
 
   {path: 'news',      component: NewsComponent},

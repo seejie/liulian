@@ -30,7 +30,6 @@ export class PreproductnameComponent implements OnInit {
       } else {
         this.router.navigate(['/home/'+this.menu, this.productName]);
       }
- 
   }
 
   selectProduct(productName){

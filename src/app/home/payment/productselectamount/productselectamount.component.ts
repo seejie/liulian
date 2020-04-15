@@ -39,6 +39,8 @@ export class ProductselectamountComponent implements OnInit {
       let dialogRef = this.dialog.open(ConfirmpaymentComponent, {data: {name: this.productName, amount: this.productAmount, account: this.productAccount}});
 
       dialogRef.afterClosed().subscribe(result => {
+      this.router.navigate(['/summery']);
+
         console.log('Dialog result: '+ result);
       });
 
@@ -54,7 +56,6 @@ export class ProductselectamountComponent implements OnInit {
       
     }
     
-
     // this.router.navigate(['/home/'+this.menu, this.productName]);
   }
   
@@ -71,7 +72,7 @@ export class ProductselectamountComponent implements OnInit {
   }
 
   onKey(event: any) { // without type info
-    this.productAccount = event.target.value;
+    this.productAccount = '+60 '+event.target.value;
     this._productService.setAccountNumber(event.target.value);
     // console.log(this.productAccount);
   }

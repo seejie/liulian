@@ -8,14 +8,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class TabbarComponent implements OnInit {
 
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(private snackBar: MatSnackBar) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   availableSoon(){
     this.snackBar.open('will be available soon', 'Dismiss', {duration: 1000});
-    console.log('click');
+    // console.log('click');
   }
 
 }
