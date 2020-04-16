@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
     private _menuProductService: MenuproductService){}
 
   ngOnInit(): void {
-    // this.menu = this._productServive.getMenu();
     this._menuProductService.getCurrencyRate().subscribe(data => {this._productService.setCurrencyRate(data.data[0].rate_cny)});
   }
 

@@ -46,8 +46,8 @@ export class PreproductnameComponent implements OnInit {
       }
   }
 
-  selectProduct(_productId, _productName, _productSKU){
-    this._productService.setProductName(_productId, _productName, _productSKU);
+  selectProduct(_productId, _productName){
+    this._productService.setProductName(_productId, _productName);
     this.productName = _productName;
   }
 

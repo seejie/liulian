@@ -21,14 +21,15 @@ export class ProductService {
     localStorage.setItem('menu', menu);
   }
 
-  setProductName(productId, productName, productSKU){
+  setProductName(productId, productName){
     this.productName = productName;
     localStorage.setItem('productName', productName);
 
-
     this.productId = productId;
     localStorage.setItem('productId', productId);
+  }
 
+  setProductSKU(productSKU){
     this.productSKU = productSKU;
     localStorage.setItem('productSKU', productSKU);
   }
