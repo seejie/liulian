@@ -79,6 +79,10 @@ export class ProductinamountComponent implements OnInit {
 
     // console.log(this.productAccount);
   }
+
+  goBack(){
+    this.router.navigate(['/home/'+this.productMenu]);
+  }
   
 
 }

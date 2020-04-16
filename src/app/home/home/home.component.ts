@@ -13,10 +13,12 @@ import { MenuproductService } from 'src/app/service/menuproduct.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private snackBar: MatSnackBar, private router: Router, private _productService: ProductService){}
+  constructor(private snackBar: MatSnackBar, private router: Router, private _productService: ProductService, 
+    private _menuProductService: MenuproductService){}
 
   ngOnInit(): void {
     // this.menu = this._productServive.getMenu();
+    this._menuProductService.getCurrencyRate().subscribe(data => {this._productService.setCurrencyRate(data.data[0].rate_cny)});
   }
 
   futureMessage(){

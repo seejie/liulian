@@ -35,10 +35,26 @@
     border-top-left-radius: 50px;
 }
 
+.product-header .icon-container ul li:first-child:hover {
+    border-right: none;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    color: #e94700;
+    background-color: #fff8f3;
+}
+
 .product-header .icon-container ul li:nth-child(2) {
     border-right: none;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
+}
+
+.product-header .icon-container ul li:nth-child(2):hover {
+    border-right: none;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    color: #e94700;
+    background-color: #fff8f3;
 }
 
 .product-header .title-logo {

@@ -10,6 +10,9 @@ export class ProductService {
   productAmount: any;
   accountNumber: any;
   productId: any;
+  productSKU: any;
+
+  currencyRate: any;
 
   constructor() {}
 
@@ -18,11 +21,16 @@ export class ProductService {
     localStorage.setItem('menu', menu);
   }
 
-  setProductName(productId, productName){
+  setProductName(productId, productName, productSKU){
     this.productName = productName;
-    localStorage.setItem('productName', productName)
+    localStorage.setItem('productName', productName);
+
+
     this.productId = productId;
-    localStorage.setItem('productId', productId)
+    localStorage.setItem('productId', productId);
+
+    this.productSKU = productSKU;
+    localStorage.setItem('productSKU', productSKU);
   }
 
   setProductAmount(productAmount){
@@ -33,6 +41,11 @@ export class ProductService {
   setAccountNumber(accountNumber){
     this.accountNumber = accountNumber;
     localStorage.setItem('accountNumber', accountNumber);
+  }
+
+  setCurrencyRate(currencyRate){
+    this.currencyRate = currencyRate;
+    localStorage.setItem('currencyRate', currencyRate)
   }
    
   getMenu(){
@@ -53,6 +66,14 @@ export class ProductService {
 
   getAccountNumber(){
     return this.accountNumber = localStorage.getItem('accountNumber');
+  }
+
+  getCurrencyRate(){
+    return this.currencyRate = localStorage.getItem('currencyRate');
+  }
+
+  getProductSKU(){
+    return this.productSKU = localStorage.getItem('productSKU');
   }
 
 }

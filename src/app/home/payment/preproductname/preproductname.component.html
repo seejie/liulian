@@ -1,10 +1,10 @@
 <div class="product-header">
     <div class="icon-container">
         <ul style="margin-block-start: 1em;margin-block-end: 1em;">
-            <li>
+            <li (click) = goBack()>
                 <fa-icon [icon]="['fas', 'chevron-left']"></fa-icon>
             </li>
-            <li>
+            <li routerLink="/home">
                 <fa-icon [icon]="['fas', 'home']"></fa-icon>
             </li>
         </ul>
@@ -18,7 +18,7 @@
     <div class="title-container">
         <div class="title">
             <!-- <span><fa-icon [icon]="['fas', 'mobile-alt']"></fa-icon></span>  -->
-            {{menu}}</div>
+            {{productMenu}}</div>
         <div class="line"></div>
     </div>
 
@@ -40,8 +40,9 @@
             </div>
 
 
-            <mat-grid-tile class="my-grid-tile" (click)="selectProduct(product.product_id, product.product_name)" *ngFor="let product of productList['data']">
+            <mat-grid-tile class="my-grid-tile" (click)="selectProduct(product.product_id, product.product_name, product.product_key)" *ngFor="let product of productList['data']">
                 <!-- <img src="../../../../assets/img/product/umobile.png" alt="">  -->
+                {{product.product_id}}
                 {{product.product_name}}
             </mat-grid-tile>
 
