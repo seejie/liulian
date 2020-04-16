@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
 
   futureMessage(){
     this.snackBar.open('will be available soon', 'Dismiss', {duration: 1000});
-    console.log('will be available soon');
   }
 
   onSelect(menu){

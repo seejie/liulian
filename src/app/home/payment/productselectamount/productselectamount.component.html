@@ -45,7 +45,7 @@
                 </ngx-skeleton-loader>
             </div>
 
-            <mat-grid-tile class="my-grid-tile" (click)="selectAmount(amount.amount_myr, amount.product_code)" *ngFor="let amount of productAmountList['data']">
+            <mat-grid-tile [ngClass]="{'active': isActive===amount.product_code}" class="my-grid-tile" (click)="selectAmount(amount.amount_myr, amount.product_code)" *ngFor="let amount of productAmountList['data']">
                 <div>
                     <div class="myr-amount"><span>MYR</span> {{amount.amount_myr}}</div>
                     <div class="cny-amount"> {{amount.amount_myr}}RM/{{(amount.amount_myr * currencyRate).toFixed(2)}}CNY</div>

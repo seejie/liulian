@@ -47,7 +47,7 @@ export class ProductinamountComponent implements OnInit {
     
     this.productMenu = this._productService.getMenu();
     this.productName = this._productService.getProductName();
-    console.log(this._productService.getProductSKU());
+    // console.log(this._productService.getProductSKU());
   }
 
     

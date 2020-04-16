@@ -23,6 +23,7 @@ export class ProductselectamountComponent implements OnInit {
   public productAmountList : Array<any>;
   public btnHidden = true;
   public currencyRate: any;
+  public isActive = '';
 
   constructor(private route: ActivatedRoute, private router: Router,private _productService: ProductService, private snackBar: MatSnackBar, private dialog: MatDialog, private _menuProductService: MenuproductService) 
   {
@@ -40,7 +41,7 @@ export class ProductselectamountComponent implements OnInit {
 
                 // console.log(this._productService.getMenu());
                 // console.log(this._productService.getProductId());
-                console.log(data);
+                // console.log(data);
               });
     } else {
       this.snackBar.open('unable to get the data, please check your internet', 'Dismiss', {duration: 3000});
@@ -84,6 +85,7 @@ export class ProductselectamountComponent implements OnInit {
   selectAmount(productAmount, productSKU){
 
     this.btnHidden = false;
+    this.isActive = productSKU;
 
     // let amount: any = parseInt(productAmount)*this.currencyRate;
     // let amountcny = parseFloat(amount).toFixed(2);
@@ -93,7 +95,7 @@ export class ProductselectamountComponent implements OnInit {
 
     this._productService.setProductAmount(this.productAmount);
     this._productService.setProductSKU(productSKU);
-    console.log(productSKU);
+    // console.log(productSKU);
   }
 
   onKey(event: any) { // without type info
