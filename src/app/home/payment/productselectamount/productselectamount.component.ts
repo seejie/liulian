@@ -21,27 +21,26 @@ export class ProductselectamountComponent implements OnInit {
   public productAmount = '';
   public productAccount = '';
   public productAmountList : Array<any>;
+  public btnHidden = true;
+  public currencyRate: any;
 
-
-  constructor(private route: ActivatedRoute, private router: Router,private _productService: ProductService, private snackBar: MatSnackBar, 
-    private dialog: MatDialog, private _menuProductService: MenuproductService) {
-      this.productAmountList = new Array<any>(); }
+  constructor(private route: ActivatedRoute, private router: Router,private _productService: ProductService, private snackBar: MatSnackBar, private dialog: MatDialog, private _menuProductService: MenuproductService) 
+  {
+    this.productAmountList = new Array<any>(); 
+  }
 
   ngOnInit(): void {
-    // let menu = this.route.snapshot.paramMap.get('menu');
-    // let productName = this.route.snapshot.paramMap.get('product');
-
-    console.log(this._productService.getProductSKU());
+    this.currencyRate = parseFloat(this._productService.getCurrencyRate()).toFixed(2);
 
     if (this._productService.getMenu() != '' &&  this._productService.getProductId() != '') {
-      this._menuProductService.getProductAmountList(this._productService.getMenu(), this._productService.getProductName())
+      this._menuProductService.getProductAmountList(this._productService.getMenu(), this._productService.getProductId())
               .subscribe(data => {
                 this.productAmountList = data;
                 this.isHidden = true;
 
                 // console.log(this._productService.getMenu());
                 // console.log(this._productService.getProductId());
-                // console.log(data);
+                console.log(data);
               });
     } else {
       this.snackBar.open('unable to get the data, please check your internet', 'Dismiss', {duration: 3000});
@@ -57,12 +56,14 @@ export class ProductselectamountComponent implements OnInit {
     if (this.productAmount != '' && this.productAccount != '') {
     // if (true) {
 
-      let dialogRef = this.dialog.open(ConfirmpaymentComponent, {data: {name: this.productName, amount: this.productAmount, account: this.productAccount}});
+      let dialogRef = this.dialog.open(ConfirmpaymentComponent, {data: {name: this.productName, amount: 'RM '+this.productAmount, account: this.productAccount}});
 
       dialogRef.afterClosed().subscribe(result => {
       this.router.navigate(['/summery']);
 
         console.log('Dialog result: '+ result);
+
+          
       });
 
     } else {
@@ -79,17 +80,20 @@ export class ProductselectamountComponent implements OnInit {
     
     // this.router.navigate(['/home/'+this.menu, this.productName]);
   }
-  
-  btnMakePayment(){
-    // this.router.navigate(['/summery']);
-  }
 
-  selectAmount(productAmount){
-    let amount: any = parseInt(productAmount)*1.63;
-    let amountcny = parseFloat(amount).toFixed(2);
-    this.productAmount = productAmount+'RM/'+ amountcny  +'CNY';
+  selectAmount(productAmount, productSKU){
+
+    this.btnHidden = false;
+
+    // let amount: any = parseInt(productAmount)*this.currencyRate;
+    // let amountcny = parseFloat(amount).toFixed(2);
+    // this.productAmount = productAmount+'RM/'+ amountcny  +'CNY';
+    
+    this.productAmount = productAmount;
+
     this._productService.setProductAmount(this.productAmount);
-    console.log(productAmount);
+    this._productService.setProductSKU(productSKU);
+    console.log(productSKU);
   }
 
   onKey(event: any) { // without type info

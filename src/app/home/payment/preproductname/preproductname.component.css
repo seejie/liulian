@@ -29,8 +29,6 @@
     border: 1px solid #c2bdba78;
 }
 
- 
-
 .product-header .icon-container ul li:first-child {
     border-right: none;
     border-bottom-left-radius: 50px;
@@ -141,7 +139,7 @@ mat-grid-tile img {
 
 .main-btn-container {
     position: fixed;
-    bottom: 30px;
+    bottom: 10px;
     width: 100%;
     margin: auto;
     text-align: center;
@@ -158,3 +156,4 @@ mat-grid-tile img {
     /* letter-spacing: 1px; */
     background: url('../../../../assets/img/banner/main-banner-image.jpg');
 }
+ 

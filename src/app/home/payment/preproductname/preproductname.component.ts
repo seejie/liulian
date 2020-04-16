@@ -16,6 +16,7 @@ export class PreproductnameComponent implements OnInit {
   public productName = '';
   public productList : Array<any>;
   public isHidden = false;
+  public btnHidden = true;
 
   constructor(private route: ActivatedRoute, private router: Router, private _productService: ProductService,
      private snackBar: MatSnackBar, private _menuProductService: MenuproductService) {
@@ -49,6 +50,7 @@ export class PreproductnameComponent implements OnInit {
   selectProduct(_productId, _productName){
     this._productService.setProductName(_productId, _productName);
     this.productName = _productName;
+    this.btnHidden = false;
   }
 
   goBack(){

@@ -34,23 +34,19 @@ export class MenuproductService {
   }
 
   getProductAmountList(_menu_id, _product): Observable<any>{
-    let getMenuURL = 'https://restservice.pavertech.my/api/pay_amount/1/1';
+    let getMenuURL = 'https://restservice.pavertech.my/api/pay_amount';
 
     if (_menu_id == 'prepaid')    {_menu_id = 1}
     if (_menu_id == 'postpaid')   {_menu_id = 2}
     if (_menu_id == 'touchngo')   {_menu_id = 3}
     if (_menu_id == 'games')      {_menu_id = 4}
     if (_menu_id == 'water')      {_menu_id = 5}
-    if (_menu_id == 'electricity')      {_menu_id = 6}
+    if (_menu_id == 'electricity'){_menu_id = 6}
     if (_menu_id == 'internet')   {_menu_id = 7}
-    if (_menu_id == 'television') {_menu_id = 8}
-    // if ($_id == 'prepaid') {$_id = 8}
-    // if ($_id == 'prepaid') {$_id = 9}
-    // if ($_id == 'prepaid') {$_id = 10}
-    // if ($_id == 'prepaid') {$_id = 11}
-    // if ($_id == 'prepaid') {$_id = 12}
+    if (_menu_id == 'television') {_menu_id = 8} 
+    getMenuURL = getMenuURL+'/'+_menu_id+'/'+_product;
 
-    // getMenuURL = getMenuURL+$_id;
+    console.log(getMenuURL);
 
     // return getMenuURL;
     return this.http.get<any>(getMenuURL);

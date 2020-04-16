@@ -63,7 +63,7 @@ mat-grid-tile {
 
 .main-btn-container {
     position: fixed;
-    bottom: 30px;
+    bottom: 10px;
     width: 100%;
     margin: auto;
     text-align: center;
