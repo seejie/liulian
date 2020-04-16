@@ -41,9 +41,8 @@
 
 
             <mat-grid-tile class="my-grid-tile" (click)="selectProduct(product.product_id, product.product_name, product.product_key)" *ngFor="let product of productList['data']">
-                <!-- <img src="../../../../assets/img/product/umobile.png" alt="">  -->
-                {{product.product_id}}
-                {{product.product_name}}
+                <img src="../../../../assets/img/product/{{product.product_image_url}}" alt=""> 
+                <!-- {{product.product_id}}{{product.product_image_url}} -->
             </mat-grid-tile>
 
             <!-- <mat-grid-tile class="my-grid-tile" [class.active]="isActive" (click)="selectProduct('celcom')">
