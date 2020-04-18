@@ -36,6 +36,7 @@ export class ProductselectamountComponent implements OnInit {
     if (this._productService.getMenu() != '' &&  this._productService.getProductId() != '') {
       this._menuProductService.getProductAmountList(this._productService.getMenu(), this._productService.getProductId())
               .subscribe(data => {
+                console.log(data, '-----data-----')
                 this.productAmountList = data;
                 this.isHidden = true;
 
@@ -54,15 +55,19 @@ export class ProductselectamountComponent implements OnInit {
   
   
   btnConfirmPayment(){
+    this.productAccount = '1127402150';
+    this.productAmount = '3';
     if (this.productAmount != '' && this.productAccount != '') {
     // if (true) {
 
       let dialogRef = this.dialog.open(ConfirmpaymentComponent, {data: {name: this.productName, amount: 'RM '+this.productAmount, account: this.productAccount}});
 
-      dialogRef.afterClosed().subscribe(result => {
-      this.router.navigate(['/summery']);
+      dialogRef.afterClosed().subscribe(confirm => {
+        console.log(confirm, '-----confirm-----')
+        if (!confirm) return
+        this.router.navigate(['/summery']);
 
-        console.log('Dialog result: '+ result);
+        console.log('Dialog result: '+ confirm);
 
           
       });
