@@ -18,6 +18,7 @@ import { PaidsummeryComponent } from './home/payment/paidsummery/paidsummery.com
 import { ProductService } from './product.service';
 import { ConfirmpaymentComponent } from './home/payment/confirmpayment/confirmpayment.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import {wxService} from './wx.service'
 
 import {HttpClientModule} from '@angular/common/http'
 
@@ -46,7 +47,7 @@ import {HttpClientModule} from '@angular/common/http'
     HttpClientModule,
     NgxSkeletonLoaderModule,
   ],
-  providers: [ProductService],
+  providers: [ProductService, wxService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

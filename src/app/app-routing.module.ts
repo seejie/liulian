@@ -14,6 +14,7 @@ import { ProductinamountComponent } from './home/payment/productinamount/product
 
 const routes: Routes = [
   {path: '',          redirectTo: '/home', pathMatch: 'full'},
+  // {path: '',          redirectTo: '/home/prepaid/Digi', pathMatch: 'full'},
   {path: 'promo',     component: PromoComponent},
   {path: 'activity',  component: ActivityComponent},
 

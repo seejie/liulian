@@ -6,6 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmpaymentComponent } from '../confirmpayment/confirmpayment.component';
 import { MenuproductService } from 'src/app/service/menuproduct.service';
+import { wxService } from 'src/app/wx.service'
 
 @Component({
   selector: 'app-productselectamount',
@@ -25,12 +26,20 @@ export class ProductselectamountComponent implements OnInit {
   public currencyRate: any;
   public isActive = '';
 
-  constructor(private route: ActivatedRoute, private router: Router,private _productService: ProductService, private snackBar: MatSnackBar, private dialog: MatDialog, private _menuProductService: MenuproductService) 
-  {
+  constructor(
+    private route: ActivatedRoute, 
+    private router: Router,
+    private _productService: ProductService, 
+    private snackBar: MatSnackBar, 
+    private dialog: MatDialog, 
+    private _menuProductService: MenuproductService,
+    private _wx: wxService
+  ) {
     this.productAmountList = new Array<any>(); 
   }
 
   ngOnInit(): void {
+    this._wx.init()
     this.currencyRate = parseFloat(this._productService.getCurrencyRate()).toFixed(2);
 
     if (this._productService.getMenu() != '' &&  this._productService.getProductId() != '') {
